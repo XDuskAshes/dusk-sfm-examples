@@ -1,0 +1,17 @@
+-- CC-0
+-- Originally created by XDuskAshes <https://github.com/XDuskAshes/>
+
+name "Furnace"
+
+-- Input items into a furnace and then remove them accurately.
+
+every 20 ticks do
+    input from InputStorage
+    output *coal* to furnace south side -- 'south side' = 'back' of furnace.
+    output except *coal* to furnace
+
+    forget
+
+    input from furnace slots 2
+    output to OutputStorage
+end

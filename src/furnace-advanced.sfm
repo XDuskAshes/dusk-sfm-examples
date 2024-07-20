@@ -1,0 +1,21 @@
+-- CC-0
+-- Originally created by XDuskAshes <https://github.com/XDuskAshes/>
+
+name "Advanced Furnacing"
+
+-- Decently advanced single-furnace usage
+
+every 20 ticks do
+    input from InputStorage
+
+    if furnace slots 1 has = 0 *coal* then -- If the furnace's fuel ( coal ) slot has 0 fuel
+        output retain 16 *coal* to furnace slots 1 -- fill fuel slot with 16 *coal* kind
+    end
+
+    output except *coal* to furnace slots 0 -- Output anything else to slot 0 ( burning stuff slot )
+
+    forget
+
+    input from furnace slots 2 -- Input from furnace output
+    output to OutputStorage
+end

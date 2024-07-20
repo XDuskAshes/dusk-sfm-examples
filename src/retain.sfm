@@ -1,0 +1,19 @@
+-- CC-0
+-- Originally created by XDuskAshes <https://github.com/XDuskAshes/>
+
+name "Retain"
+
+-- Retain a certain number of things from input
+-- or output.
+
+every 20 ticks do
+    input retain 32 from InputStorage
+    
+    output to OutputStorage
+
+    forget -- This tells sfm to forget everything before this. If you use C or another memory-unsafe language, think of it as a memory freeing keyword.
+
+    input from InputStorage
+    
+    output retain 32 to OutputStorage
+end

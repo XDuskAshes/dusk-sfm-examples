@@ -1,0 +1,11 @@
+-- CC-0
+-- Originally created by XDuskAshes <https://github.com/XDuskAshes/>
+
+name "Chest-To-Chest"
+
+-- Simple program to move things from one chest to another.
+
+every 20 ticks do
+    input from chest1
+    output to chest2
+end

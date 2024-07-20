@@ -1,0 +1,15 @@
+-- CC-0
+-- Originally created by XDuskAshes <https://github.com/XDuskAshes/>
+
+name "Input to Outputs"
+
+-- Simple program to move things from one input to multiple outputs, sorted accordingly.
+-- For this example, I'm sorting Iron, Copper, and Gold ingots.
+
+every 20 ticks do
+    input from InputStorage
+    
+    output iron_ingot to IronStorage
+    output copper_ingot to CopperStorage
+    output gold_ingot to GoldStorage
+end

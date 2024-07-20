@@ -1,0 +1,14 @@
+-- CC-0
+-- Originally created by XDuskAshes <https://github.com/XDuskAshes/>
+
+name "Output Except"
+
+-- Exclude certain things from being output. For example:
+-- Say you have just two chests. You want to put anything
+-- but ingots in the second one.
+
+every 20 ticks do
+    input except *ingot* from InputStorage
+    
+    output to OutputStorage
+end
